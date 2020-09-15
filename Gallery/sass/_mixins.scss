@@ -1,0 +1,20 @@
+//        //
+// MIXINS //
+//        //     
+
+@function em($size, $context: 16) {
+	@return ($size / $context) + em;
+}
+
+@mixin container( $width ) {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+@mixin media-container( $max-width, $container-width ) {
+	@media screen and ( max-width: $max-width){
+		.container {
+			@include container( em($container-width) );
+		}
+	}
+}

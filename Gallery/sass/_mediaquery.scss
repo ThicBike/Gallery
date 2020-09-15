@@ -1,0 +1,17 @@
+//                //
+//  MEDIA QUERIY  //
+//                //
+
+@include media-container (1100px, 782);
+@include media-container (850px, 526);
+@include media-container (610px, 272);
+
+@media screen and ( max-width: em(610) ) {
+    #last {
+        bottom: 0;
+        &:hover,
+        &:focus {
+            bottom: em(15);
+        }
+    }
+}
